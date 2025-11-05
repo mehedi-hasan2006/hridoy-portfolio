@@ -1,0 +1,108 @@
+body {
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-color: #fff;
+    z-index: 999;
+}
+
+.nav-link {
+    color: #292929 !important;
+    margin-left: 15px;
+    font-weight: 500;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    color: #157ACE !important;
+}
+
+.geetings {
+    font-weight: 600;
+    color: #157ACE;
+}
+
+.profession {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+.btn a {
+    font-weight: 500;
+}
+
+.description p {
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.project {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 70px;
+}
+
+.work {
+    width: 350px;
+    border-radius: 10px;
+}
+
+.font{
+    font-weight: bold;
+}
+
+/* === Responsive Fixes === */
+@media (max-width: 992px) {
+    .container-sm .row {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .description {
+        margin-top: 25px;
+    }
+
+    .information .row {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .information .col {
+        flex: 1 1 45%;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-sm {
+        margin-top: 70px;
+    }
+
+    h3.text-primary {
+        font-size: 1.4rem;
+    }
+
+    .btn {
+        width: 180px;
+        height: 45px;
+        font-size: 15px;
+    }
+
+    .information .col p {
+        font-size: 0.9rem;
+    }
+
+    .work {
+        width: 100%;
+        max-width: 300px;
+        padding: 30px 20px !important;
+    }
+
+    .project {
+        gap: 15px;
+    }
+}

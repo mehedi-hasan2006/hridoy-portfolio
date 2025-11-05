@@ -1,0 +1,78 @@
+body {
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-color: #fff;
+    z-index: 999;
+}
+
+.nav-link {
+    color: #292929 !important;
+    margin-left: 15px;
+    font-weight: 500;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    color: #157ACE !important;
+}
+
+.geetings {
+    color: #157ACE;
+    font-weight: 600;
+}
+
+.contact {
+    line-height: 2;
+}
+
+.contact i {
+    color: #157ACE;
+    margin-right: 8px;
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+.btn {
+    width: 180px;
+    height: 45px;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+/* === Responsive Fixes === */
+@media (max-width: 992px) {
+    .contactME {
+        flex-direction: column !important;
+        text-align: left;
+        gap: 40px !important;
+    }
+
+    .inputSection {
+        max-width: 80% !important;
+        padding: 0 20px;
+    }
+
+    .infoSction {
+        padding: 0 20px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        height: 42px;
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,51 @@
+body {
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-color: #fff;
+    z-index: 999;
+}
+
+.nav-link {
+    color: #292929 !important;
+    margin-left: 15px;
+    font-weight: 500;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    color: #157ACE !important;
+}
+
+.icon img{
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
+.message{
+    height: 340px;
+    background-color: #157ACE;
+}
+
+.confirmation1{
+    padding-top:30px ;
+    font-weight: bold;
+}
+.confirmation2{
+    font-size:13px;
+}
+
+.btn{
+   border-radius: 30px;
+}
+
+.btn i{
+    color: #157ACE;
+    text-transform: none;
+}
+
+.btn i a{
+    text-decoration: none;
+}

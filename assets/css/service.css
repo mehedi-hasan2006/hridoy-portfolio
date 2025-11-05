@@ -1,0 +1,38 @@
+body {
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-color: #fff;
+    z-index: 999;
+}
+
+.nav-link {
+    color: #292929 !important;
+    margin-left: 15px;
+    font-weight: 500;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    color: #157ACE !important;
+}
+
+
+.btn a:hover{
+    color: #fff;
+}
+
+
+@media (max-width: 992px) {
+    .container{
+       display: flexbox;
+        
+    }
+    .shadow-sm{
+        display: grid;
+        
+        flex-wrap: wrap;
+    }
+}
