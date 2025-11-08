@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background-color: #fff;
+        }
+
+        .nav-link {
+            color: #292929 !important;
+            margin-left: 15px;
+            font-weight: 500;
+        }
+
+        .nav-link.active,
+        .nav-link:hover {
+            color: #157ACE !important;
+        }
+
+        /* Portfolio Section */
+        .port-text {
+            display: flex;
+            justify-content: space-between;
+            gap: 100px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+
+        .port-overview {
+            max-width: 350px;
+        }
+
+        .port-section {
+            max-width: 600px;
+        }
+
+        /* Filter Buttons */
+        .portfolio-filter {
+            display: flex;
+            gap: 25px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+
+        .portfolio-filter button {
+            border: none;
+            background: none;
+            color: #292929;
+            font-weight: 500;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .portfolio-filter button.active,
+        .portfolio-filter button:hover {
+            color: #157ACE;
+            text-decoration: underline;
+        }
+
+        /* Portfolio Grid */
+        .portfolio-grid {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .portfolio-item {
+            text-align: center;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.03);
+        }
+
+        .portfolio-item button {
+            margin-top: 15px;
+            border-radius: 50px;
+            font-weight: 500;
+            padding: 8px 20px;
+        }
+
+        @media (max-width: 991px) {
+            .port-text {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .port-section,
+            .port-overview {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg shadow-sm py-3">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <img src="assets/img/logo.png" alt="Logo" width="120">
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#NavbarIcon">
+                <i class="bi bi-list fs-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="NavbarIcon">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="service.html" class="nav-link">Service</a></li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Portfolio Description -->
+    <div class="container port-text">
+        <div class="port-overview">
+            <h1 class="text-primary mb-4">My Portfolio</h1>
+            <p>Here’s a showcase of my most impactful projects, each designed with a focus on solving user problems and
+                creating seamless digital experiences. From UX research to high-fidelity prototypes, I strive to combine
+                creativity and functionality in every design.</p>
+        </div>
+
+        <div class="port-section">
+            <h4 class="text-primary mb-3">The Challenge</h4>
+            <p>The goal was to design a mobile app for a food delivery startup, ensuring smooth navigation and an
+                intuitive user experience for first-time users.</p>
+
+            <h4 class="text-primary mb-3">My Role</h4>
+            <p>As the lead UX/UI designer, I conducted user research, wireframed solutions, and delivered a full UI
+                prototype.</p>
+
+            <h4 class="text-primary mb-3">The Process</h4>
+            <p>Starting with user interviews, I identified pain points in the food ordering process. Based on the
+                insights, I created wireframes, iterated on feedback, and delivered a pixel-perfect final design using
+                Figma.</p>
+
+            <h4 class="text-primary mb-3">The Outcome</h4>
+            <p>The app achieved a 40% increase in user retention and received positive feedback for its clean interface
+                and easy navigation.</p>
+        </div>
+    </div>
+
+    <!-- Category Buttons -->
+    <div class="container">
+        <div class="portfolio-filter">
+            <button class="active" data-filter="all">All</button>
+            <button data-filter="landing">Landing Page</button>
+            <button data-filter="mobile">Mobile App</button>
+            <button data-filter="dashboard">Dashboard</button>
+        </div>
+
+        <!-- Portfolio Images -->
+        <div class="portfolio-grid mt-4">
+
+            <!-- Landing Page -->
+            <div class="portfolio-item" data-category="landing">
+                <img src="assets/img/Furniture Landing Page.png" alt="">
+                <a href="furniture_landing_page.html"><button class="btn btn-primary">View more <i class="bi bi-arrow-right"></i></button></a>
+            </div>
+
+            <div class="portfolio-item" data-category="landing">
+                <img src="assets/img/Real Estate  PAGE.png" alt="">
+                <a href="Real_Estate_Landing_Page.html"><button class="btn btn-primary">View more <i class="bi bi-arrow-right"></i></button></a>
+            </div>
+
+            <div class="portfolio-item" data-category="landing">
+                <img src="assets/img/Real Estate  PAGE 2.png" alt="">
+                <a href="Real_Estate_Landing_Page2.html"><button class="btn btn-primary">View more <i class="bi bi-arrow-right"></i></button></a>
+            </div>
+
+            <div class="portfolio-item" data-category="landing">
+                <img src="assets/img/booking page.png" alt="">
+                <a href="booking_landing_page.html"><button class="btn btn-primary">View more <i class="bi bi-arrow-right"></i></button></a>
+            </div>
+
+            <!-- Mobile App -->
+            <div class="portfolio-item" data-category="mobile">
+                <img src="assets/img/mobile app.png" alt="" >
+                <a href="mobile_landing_page.html"><button class="btn btn-primary">View more <i class="bi bi-arrow-right"></i></button></a>
+            </div>
+
+            <!-- Dashboard -->
+            <div class="portfolio-item" data-category="dashboard">
+                <img src="assets/img/dashboard page.png" alt="">
+                <a href="dashboard_landing_page.html"><button class="btn btn-primary">View more <i class="bi bi-arrow-right"></i></button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Filter Script -->
+    <script>
+        const filterButtons = document.querySelectorAll(".portfolio-filter button");
+        const items = document.querySelectorAll(".portfolio-item");
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                filterButtons.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+
+                const category = btn.dataset.filter;
+                items.forEach(item => {
+                    if (category === "all" || item.dataset.category === category) {
+                        item.style.display = "block";
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

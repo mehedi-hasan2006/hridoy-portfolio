@@ -19,20 +19,61 @@ body {
     color: #157ACE !important;
 }
 
-
-.btn a:hover{
-    color: #fff;
+/* --- Service Box Layout --- */
+.container.d-flex {
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
 }
 
+.hoverEffect {
+    flex: 1 1 calc(33.333% - 20px);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    background: #fff;
+    min-height: 270px;
+}
 
+.hoverEffect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container>div h3:first-child {
+    color: #157ACE;
+    font-weight: 600;
+}
+
+.btn-outline-primary {
+    transition: 0.3s;
+}
+
+.btn-outline-primary:hover {
+    background: #157ACE;
+    color: #fff !important;
+    border-color: #157ACE;
+}
+
+/* --- Responsive Layout --- */
 @media (max-width: 992px) {
-    .container{
-       display: flexbox;
-        
+    .container>div {
+        flex: 1 1 calc(45% - 15px);
     }
-    .shadow-sm{
-        display: grid;
-        
-        flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .container>div {
+        flex: 1 1 100%;
+    }
+
+    .container.d-flex {
+        gap: 20px !important;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .hoverEffect {
+        padding: 20px;
     }
 }
